@@ -1,13 +1,13 @@
 import sys
-import algos as al
+import util as u
 
 def main():
-    filename = str(sys.argv[1])
-    pw = int(sys.argv[2])
+    filename = sys.argv[1]
+    pw = u.str2num(sys.argv[2])
     with open(filename, 'r') as myfile:
         plaintext = myfile.read()
     with open('cyphertext.txt','wb') as outfile:
-        outfile.write(al.encrypt(plaintext,pw))
+        outfile.write(u.encrypt(plaintext,pw))
            
 if __name__ == '__main__':
     main()

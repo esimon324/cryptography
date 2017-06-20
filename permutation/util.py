@@ -37,3 +37,15 @@ def decrypt(cyphertext,password):
         plaintext = plaintext + map[char]
         
     return plaintext
+    
+def str2num(s):
+    num = 0
+    alt = True
+    for ch in s:
+        if alt:
+            num *= ord(ch)
+            alt = False
+        else:
+            num += ord(ch)
+            alt = True
+    return num
